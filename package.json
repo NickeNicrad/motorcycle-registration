@@ -1,0 +1,23 @@
+{
+  "name": "secure-moto",
+  "version": "1.0.0",
+  "description": "Secure Moto is a motocycle registration system",
+  "scripts": {
+    "start": "concurrently \"npm start --prefix client\" \"npm start --prefix api\"",
+    "dev": "concurrently \"npm start --prefix client\" \"npm run dev --prefix api\"",
+    "release":"cd client && npm run build && cd ../ && serve -s ./client/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickeNicrad/motorcycle-registration.git"
+  },
+  "author": "Darcin Kwamiso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickeNicrad/motorcycle-registration/issues"
+  },
+  "homepage": "https://github.com/NickeNicrad/motorcycle-registration#readme",
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
